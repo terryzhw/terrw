@@ -20,6 +20,7 @@ interface Experience {
 interface Project {
   name: string;
   link: string;
+  date: string; 
   description: string;
 }
 
@@ -34,8 +35,8 @@ interface Profile {
 
 const PROFILE: Profile = {
   name: "Terrance Wong",
-  title: "Software Engineer",
-  bio: "I love building things, solving problems, and drinking coffee. Currently working on high-scale systems and learning Rust in my free time.",
+  title: "Computer Engineering @ UC Riverside",
+  bio: "placeholder",
   socials: [
     { 
       label: "LinkedIn", 
@@ -64,7 +65,7 @@ const EXPERIENCE: Experience[] = [
   {
     company: "placeholder",
     role: "placeholder",
-    date: "placeholder",
+    date: "20XX - 20XX",
     description: "placeholder"
   }
 ];
@@ -73,6 +74,7 @@ const PROJECTS: Project[] = [
   {
     name: "placeholder",
     link: "placeholder",
+    date: "20XX - 20XX",
     description: "placeholder"
   }
 ];
@@ -105,6 +107,7 @@ const ProjectItem: React.FC<{ data: Project }> = ({ data }) => (
       >
         {data.name} ↗
       </a>
+      <span className="item-date">{data.date}</span>
     </div>
     <p className="item-desc">{data.description}</p>
   </div>
